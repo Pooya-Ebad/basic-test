@@ -4,6 +4,7 @@
   "main": "Test_APP.js",
   "scripts": {
     "test": "jest ./jest/book.jest.test",
+    "test-mock": "jest ./mock/index.spec.js",
     "mocha": "mocha ./mocha-chai/toDo.mocha.test"
   },
   "keywords": [],
