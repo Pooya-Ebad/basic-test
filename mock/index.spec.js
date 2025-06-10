@@ -16,4 +16,17 @@ describe("userService test with mock", () => {
         expect(mockCallback).toHaveBeenCalledWith(3)
         expect(mockCallback).toHaveBeenCalledWith(4)
     })
+    it("test value", async () => {
+        database.fetchData.mockImplementation(id => {
+            if(id === 1) {
+                return Promise.resolve({id : 1, name : "mocked data"})
+            }
+            if(id === 2) {
+                return Promise.resolve({id : 2, name : "mocked data 2"})
+            }
+            return Promise.resolve({Error : "user not found"}) 
+        })
+        const result = await userService.getUSerData(10)
+        expect(result).toEqual({Error : "user not found"})
+    })
 })

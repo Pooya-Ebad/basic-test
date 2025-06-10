@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "Test_APP.js",
   "scripts": {
-    "test": "jest ./jest/book.jest.test",
+    "test" : "jest",
+    "jest": "jest ./jest/book.jest.test",
     "test-mock": "jest ./mock/index.spec.js",
+    "test-spy": "jest ./spying/spy.spec.js",
     "mocha": "mocha ./mocha-chai/toDo.mocha.test"
   },
   "keywords": [],
